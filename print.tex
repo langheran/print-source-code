@@ -1,0 +1,24 @@
+\documentclass{article}
+\usepackage{listings}
+\usepackage[usenames,dvipsnames]{color}  %% Allow color names
+\lstdefinestyle{customasm}{
+  belowcaptionskip=1\baselineskip,
+  xleftmargin=\parindent,
+  language=Matlab,   %% Change this to whatever you write in
+  breaklines=true, %% Wrap long lines
+  basicstyle=\footnotesize\ttfamily,
+  commentstyle=\itshape\color{Gray},
+  stringstyle=\color{Black},
+  keywordstyle=\bfseries\color{OliveGreen},
+  identifierstyle=\color{blue},
+  xleftmargin=-8em,
+}        
+\usepackage[colorlinks=true,linkcolor=blue]{hyperref} 
+\begin{document}
+\tableofcontents
+\newpage
+\section{SetValueOfAssignment.m}
+\lstinputlisting[style=customasm]{SetValueOfAssignment.m}
+\section{NormalizeCPDFactors.m}
+\lstinputlisting[style=customasm]{NormalizeCPDFactors.m}
+\end{document}
