@@ -10,7 +10,8 @@ if(args="")
 
 language:="Matlab"
 ext:="m"
-
+SplitPath, args, title
+title:=StrReplace(title,"_","\_")
 body=
 (
 \documentclass{article}
@@ -28,9 +29,12 @@ body=
   keywordstyle=\bfseries\color{OliveGreen},
   identifierstyle=\color{blue},
   xleftmargin=1em,
-}        
-\usepackage[colorlinks=true,linkcolor=blue]{hyperref} 
+}
+\usepackage[colorlinks=true,linkcolor=blue,linktocpage=true]{hyperref}
+\title{%title%}
 \begin{document}
+\maketitle
+\label{toc}
 \tableofcontents
 \newpage
 )
@@ -41,11 +45,17 @@ if(IsDirectory(args))
     {
         selFile:=A_LoopFileLongPath
         SplitPath, selFile,name,dir,,name_no_ext
-        dir:=StrReplace(dir, args, ".")
+        dir:=StrReplace(dir, args . "\")
+        dir:=StrReplace(dir, args)
         selFile:=StrReplace(selFile, "\","/")
-        dir:=StrReplace(dir, "\","/")
-        name:=StrReplace(name,"_","\_")
-        path:=dir . "/" . name
+        if(dir<>"")
+            path:=dir . "/" . name
+        else
+            path:=name
+        path:=StrReplace(path,"\","/")
+        path:=StrReplace(path,"_","\_")
+        path:="./" . path
+; \section{\hyperref[toc]{%path%}}
 body=%body%
 (
 
@@ -62,14 +72,20 @@ body=%body%
 )
 
 FileDelete, %A_ScriptDir%\print.tex
+FileDelete, %A_ScriptDir%\print.synctex.gz
+FileDelete, %A_ScriptDir%\print.aux
+FileDelete, %A_ScriptDir%\print.log
+FileDelete, %A_ScriptDir%\print.out
+FileDelete, %A_ScriptDir%\print.toc
+Sleep, 500
 FileAppend, %body%, %A_ScriptDir%\print.tex
 
-RunWait, %comspec% /k pdflatex.exe -synctex=1 --shell-escape -interaction=nonstopmode "print".tex && exit || pause && exit, %A_ScriptDir%
+RunWait, %comspec% /k pdflatex.exe -synctex=1 --shell-escape -interaction=nonstopmode "print".tex && pdflatex.exe -synctex=1 --shell-escape -interaction=nonstopmode "print".tex && exit || pause && exit, %A_ScriptDir%
 
 SplitPath, args, OutFileName, OutDir, OutExtension, OutNameNoExt, OutDrive
 
 selFile=%OutDir%\%OutFileName%.pdf
-FileMove, %A_ScriptDir%\print.pdf, %OutDir%\%OutFileName%.pdf
+FileMove, %A_ScriptDir%\print.pdf, %OutDir%\%OutFileName%.pdf, 1
 
 Run, %selFile%
 
