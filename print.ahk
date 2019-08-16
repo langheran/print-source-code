@@ -30,7 +30,7 @@ body=
   identifierstyle=\color{blue},
   xleftmargin=1em,
 }
-\usepackage[colorlinks=true,linkcolor=blue,linktocpage=true]{hyperref}
+\usepackage[colorlinks=true,linkcolor=blue,linktocpage=true,linktoc=all]{hyperref}
 \title{%title%}
 \begin{document}
 \maketitle
