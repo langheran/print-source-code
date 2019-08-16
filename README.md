@@ -3,3 +3,5 @@
 ![select](docs/images/select.png)
 
 ![sendto](docs/images/sendto.png)
+
+![view](docs/images/view.png)
