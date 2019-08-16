@@ -64,7 +64,14 @@ body=%body%
 FileDelete, %A_ScriptDir%\print.tex
 FileAppend, %body%, %A_ScriptDir%\print.tex
 
-Run, %comspec% /k pdflatex.exe -synctex=1 --shell-escape -interaction=nonstopmode "print".tex && print.pdf && exit || pause && exit, %A_ScriptDir%
+RunWait, %comspec% /k pdflatex.exe -synctex=1 --shell-escape -interaction=nonstopmode "print".tex && exit || pause && exit, %A_ScriptDir%
+
+SplitPath, args, OutFileName, OutDir, OutExtension, OutNameNoExt, OutDrive
+
+selFile=%OutDir%\%OutFileName%.pdf
+FileMove, %A_ScriptDir%\print.pdf, %OutDir%\%OutFileName%.pdf
+
+Run, %selFile%
 
 return
 
