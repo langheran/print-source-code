@@ -1,8 +1,7 @@
 \documentclass{article}
 \usepackage[left=5mm, top=5mm, bottom=5mm, right=5mm]{geometry}
 \usepackage{listings}
-\usepackage[usenames,dvipsnames]{color}
-\lstdefinestyle{customasm}{
+\usepackage[usenames,dvipsnames]{color}\lstdefinestyle{customm}{
   belowcaptionskip=1\baselineskip,
   xleftmargin=\parindent,
   language=Matlab,
@@ -13,106 +12,80 @@
   keywordstyle=\bfseries\color{OliveGreen},
   identifierstyle=\color{blue},
   xleftmargin=1em,
-}
-\usepackage[colorlinks=true,linkcolor=blue,linktocpage=true,linktoc=all]{hyperref}
-\title{PA-CRF-Learning-For-OCR-Release}
+}\lstdefinestyle{custompy}{
+  belowcaptionskip=1\baselineskip,
+  xleftmargin=\parindent,
+  language=Python,
+  breaklines=true,
+  basicstyle=\footnotesize\ttfamily,
+  commentstyle=\itshape\color{Gray},
+  stringstyle=\color{Black},
+  keywordstyle=\bfseries\color{OliveGreen},
+  identifierstyle=\color{blue},
+  xleftmargin=1em,
+}\usepackage[colorlinks=true,linkcolor=blue,linktocpage=true,linktoc=all]{hyperref}
+\title{CUTIE}
 \begin{document}
 \maketitle
 \label{toc}
 \tableofcontents
 \newpage
-\section{./AssignmentToIndex.m}
-\lstinputlisting[style=customasm]{"C:/Users/langh/Dropbox/MCC-I Masters/PGM/PGM3/Week1/PA-CRF-Learning-For-OCR-Release/AssignmentToIndex.m"}
-\section{./CliqueTreeCalibrate.m}
-\lstinputlisting[style=customasm]{"C:/Users/langh/Dropbox/MCC-I Masters/PGM/PGM3/Week1/PA-CRF-Learning-For-OCR-Release/CliqueTreeCalibrate.m"}
-\section{./ComputeConditionedSingletonFeatures.m}
-\lstinputlisting[style=customasm]{"C:/Users/langh/Dropbox/MCC-I Masters/PGM/PGM3/Week1/PA-CRF-Learning-For-OCR-Release/ComputeConditionedSingletonFeatures.m"}
-\section{./ComputeExactMarginalsBP.m}
-\lstinputlisting[style=customasm]{"C:/Users/langh/Dropbox/MCC-I Masters/PGM/PGM3/Week1/PA-CRF-Learning-For-OCR-Release/ComputeExactMarginalsBP.m"}
-\section{./ComputeInitialPotentials.m}
-\lstinputlisting[style=customasm]{"C:/Users/langh/Dropbox/MCC-I Masters/PGM/PGM3/Week1/PA-CRF-Learning-For-OCR-Release/ComputeInitialPotentials.m"}
-\section{./ComputeJointDistribution.m}
-\lstinputlisting[style=customasm]{"C:/Users/langh/Dropbox/MCC-I Masters/PGM/PGM3/Week1/PA-CRF-Learning-For-OCR-Release/ComputeJointDistribution.m"}
-\section{./ComputeMarginal.m}
-\lstinputlisting[style=customasm]{"C:/Users/langh/Dropbox/MCC-I Masters/PGM/PGM3/Week1/PA-CRF-Learning-For-OCR-Release/ComputeMarginal.m"}
-\section{./ComputeUnconditionedPairFeatures.m}
-\lstinputlisting[style=customasm]{"C:/Users/langh/Dropbox/MCC-I Masters/PGM/PGM3/Week1/PA-CRF-Learning-For-OCR-Release/ComputeUnconditionedPairFeatures.m"}
-\section{./ComputeUnconditionedSingletonFeatures.m}
-\lstinputlisting[style=customasm]{"C:/Users/langh/Dropbox/MCC-I Masters/PGM/PGM3/Week1/PA-CRF-Learning-For-OCR-Release/ComputeUnconditionedSingletonFeatures.m"}
-\section{./CreateCliqueTree.m}
-\lstinputlisting[style=customasm]{"C:/Users/langh/Dropbox/MCC-I Masters/PGM/PGM3/Week1/PA-CRF-Learning-For-OCR-Release/CreateCliqueTree.m"}
-\section{./EliminateVar.m}
-\lstinputlisting[style=customasm]{"C:/Users/langh/Dropbox/MCC-I Masters/PGM/PGM3/Week1/PA-CRF-Learning-For-OCR-Release/EliminateVar.m"}
-\section{./EmptyFactorStruct.m}
-\lstinputlisting[style=customasm]{"C:/Users/langh/Dropbox/MCC-I Masters/PGM/PGM3/Week1/PA-CRF-Learning-For-OCR-Release/EmptyFactorStruct.m"}
-\section{./EmptyFeatureStruct.m}
-\lstinputlisting[style=customasm]{"C:/Users/langh/Dropbox/MCC-I Masters/PGM/PGM3/Week1/PA-CRF-Learning-For-OCR-Release/EmptyFeatureStruct.m"}
-\section{./FactorMarginalization.m}
-\lstinputlisting[style=customasm]{"C:/Users/langh/Dropbox/MCC-I Masters/PGM/PGM3/Week1/PA-CRF-Learning-For-OCR-Release/FactorMarginalization.m"}
-\section{./FactorMaxMarginalization.m}
-\lstinputlisting[style=customasm]{"C:/Users/langh/Dropbox/MCC-I Masters/PGM/PGM3/Week1/PA-CRF-Learning-For-OCR-Release/FactorMaxMarginalization.m"}
-\section{./FactorProduct.m}
-\lstinputlisting[style=customasm]{"C:/Users/langh/Dropbox/MCC-I Masters/PGM/PGM3/Week1/PA-CRF-Learning-For-OCR-Release/FactorProduct.m"}
-\section{./FactorSum.m}
-\lstinputlisting[style=customasm]{"C:/Users/langh/Dropbox/MCC-I Masters/PGM/PGM3/Week1/PA-CRF-Learning-For-OCR-Release/FactorSum.m"}
-\section{./GenerateAllFeatures.m}
-\lstinputlisting[style=customasm]{"C:/Users/langh/Dropbox/MCC-I Masters/PGM/PGM3/Week1/PA-CRF-Learning-For-OCR-Release/GenerateAllFeatures.m"}
-\section{./GetNextCliques.m}
-\lstinputlisting[style=customasm]{"C:/Users/langh/Dropbox/MCC-I Masters/PGM/PGM3/Week1/PA-CRF-Learning-For-OCR-Release/GetNextCliques.m"}
-\section{./GetValueOfAssignment.m}
-\lstinputlisting[style=customasm]{"C:/Users/langh/Dropbox/MCC-I Masters/PGM/PGM3/Week1/PA-CRF-Learning-For-OCR-Release/GetValueOfAssignment.m"}
-\section{./IndexToAssignment.m}
-\lstinputlisting[style=customasm]{"C:/Users/langh/Dropbox/MCC-I Masters/PGM/PGM3/Week1/PA-CRF-Learning-For-OCR-Release/IndexToAssignment.m"}
-\section{./InstanceNegLogLikelihood.m}
-\lstinputlisting[style=customasm]{"C:/Users/langh/Dropbox/MCC-I Masters/PGM/PGM3/Week1/PA-CRF-Learning-For-OCR-Release/InstanceNegLogLikelihood.m"}
-\section{./LRAccuracy.m}
-\lstinputlisting[style=customasm]{"C:/Users/langh/Dropbox/MCC-I Masters/PGM/PGM3/Week1/PA-CRF-Learning-For-OCR-Release/LRAccuracy.m"}
-\section{./LRCostSGD.m}
-\lstinputlisting[style=customasm]{"C:/Users/langh/Dropbox/MCC-I Masters/PGM/PGM3/Week1/PA-CRF-Learning-For-OCR-Release/LRCostSGD.m"}
-\section{./LRPredict.m}
-\lstinputlisting[style=customasm]{"C:/Users/langh/Dropbox/MCC-I Masters/PGM/PGM3/Week1/PA-CRF-Learning-For-OCR-Release/LRPredict.m"}
-\section{./LRSearchLambdaSGD.m}
-\lstinputlisting[style=customasm]{"C:/Users/langh/Dropbox/MCC-I Masters/PGM/PGM3/Week1/PA-CRF-Learning-For-OCR-Release/LRSearchLambdaSGD.m"}
-\section{./LRTrainSGD.m}
-\lstinputlisting[style=customasm]{"C:/Users/langh/Dropbox/MCC-I Masters/PGM/PGM3/Week1/PA-CRF-Learning-For-OCR-Release/LRTrainSGD.m"}
-\section{./MaxDecoding.m}
-\lstinputlisting[style=customasm]{"C:/Users/langh/Dropbox/MCC-I Masters/PGM/PGM3/Week1/PA-CRF-Learning-For-OCR-Release/MaxDecoding.m"}
-\section{./NumParamsForConditionedFeatures.m}
-\lstinputlisting[style=customasm]{"C:/Users/langh/Dropbox/MCC-I Masters/PGM/PGM3/Week1/PA-CRF-Learning-For-OCR-Release/NumParamsForConditionedFeatures.m"}
-\section{./NumParamsForUnconditionedFeatures.m}
-\lstinputlisting[style=customasm]{"C:/Users/langh/Dropbox/MCC-I Masters/PGM/PGM3/Week1/PA-CRF-Learning-For-OCR-Release/NumParamsForUnconditionedFeatures.m"}
-\section{./ObserveEvidence.m}
-\lstinputlisting[style=customasm]{"C:/Users/langh/Dropbox/MCC-I Masters/PGM/PGM3/Week1/PA-CRF-Learning-For-OCR-Release/ObserveEvidence.m"}
-\section{./PruneTree.m}
-\lstinputlisting[style=customasm]{"C:/Users/langh/Dropbox/MCC-I Masters/PGM/PGM3/Week1/PA-CRF-Learning-For-OCR-Release/PruneTree.m"}
-\section{./SetValueOfAssignment.m}
-\lstinputlisting[style=customasm]{"C:/Users/langh/Dropbox/MCC-I Masters/PGM/PGM3/Week1/PA-CRF-Learning-For-OCR-Release/SetValueOfAssignment.m"}
-\section{./sigmoid.m}
-\lstinputlisting[style=customasm]{"C:/Users/langh/Dropbox/MCC-I Masters/PGM/PGM3/Week1/PA-CRF-Learning-For-OCR-Release/sigmoid.m"}
-\section{./StochasticGradientDescent.m}
-\lstinputlisting[style=customasm]{"C:/Users/langh/Dropbox/MCC-I Masters/PGM/PGM3/Week1/PA-CRF-Learning-For-OCR-Release/StochasticGradientDescent.m"}
-\section{./submit.m}
-\lstinputlisting[style=customasm]{"C:/Users/langh/Dropbox/MCC-I Masters/PGM/PGM3/Week1/PA-CRF-Learning-For-OCR-Release/submit.m"}
-\section{./Test.m}
-\lstinputlisting[style=customasm]{"C:/Users/langh/Dropbox/MCC-I Masters/PGM/PGM3/Week1/PA-CRF-Learning-For-OCR-Release/Test.m"}
-\section{./VisualizeCharacters.m}
-\lstinputlisting[style=customasm]{"C:/Users/langh/Dropbox/MCC-I Masters/PGM/PGM3/Week1/PA-CRF-Learning-For-OCR-Release/VisualizeCharacters.m"}
-\section{./lib/makeValidFieldName.m}
-\lstinputlisting[style=customasm]{"C:/Users/langh/Dropbox/MCC-I Masters/PGM/PGM3/Week1/PA-CRF-Learning-For-OCR-Release/lib/makeValidFieldName.m"}
-\section{./lib/submitWithConfiguration.m}
-\lstinputlisting[style=customasm]{"C:/Users/langh/Dropbox/MCC-I Masters/PGM/PGM3/Week1/PA-CRF-Learning-For-OCR-Release/lib/submitWithConfiguration.m"}
-\section{./lib/jsonlab/jsonopt.m}
-\lstinputlisting[style=customasm]{"C:/Users/langh/Dropbox/MCC-I Masters/PGM/PGM3/Week1/PA-CRF-Learning-For-OCR-Release/lib/jsonlab/jsonopt.m"}
-\section{./lib/jsonlab/loadjson.m}
-\lstinputlisting[style=customasm]{"C:/Users/langh/Dropbox/MCC-I Masters/PGM/PGM3/Week1/PA-CRF-Learning-For-OCR-Release/lib/jsonlab/loadjson.m"}
-\section{./lib/jsonlab/loadubjson.m}
-\lstinputlisting[style=customasm]{"C:/Users/langh/Dropbox/MCC-I Masters/PGM/PGM3/Week1/PA-CRF-Learning-For-OCR-Release/lib/jsonlab/loadubjson.m"}
-\section{./lib/jsonlab/mergestruct.m}
-\lstinputlisting[style=customasm]{"C:/Users/langh/Dropbox/MCC-I Masters/PGM/PGM3/Week1/PA-CRF-Learning-For-OCR-Release/lib/jsonlab/mergestruct.m"}
-\section{./lib/jsonlab/savejson.m}
-\lstinputlisting[style=customasm]{"C:/Users/langh/Dropbox/MCC-I Masters/PGM/PGM3/Week1/PA-CRF-Learning-For-OCR-Release/lib/jsonlab/savejson.m"}
-\section{./lib/jsonlab/saveubjson.m}
-\lstinputlisting[style=customasm]{"C:/Users/langh/Dropbox/MCC-I Masters/PGM/PGM3/Week1/PA-CRF-Learning-For-OCR-Release/lib/jsonlab/saveubjson.m"}
-\section{./lib/jsonlab/varargin2struct.m}
-\lstinputlisting[style=customasm]{"C:/Users/langh/Dropbox/MCC-I Masters/PGM/PGM3/Week1/PA-CRF-Learning-For-OCR-Release/lib/jsonlab/varargin2struct.m"}
+    \section{./bert\_embedding.py}
+    \lstinputlisting[style=custompy]{"C:/Users/langh/Home/Charlie/edx/net/CUTIE/bert_embedding.py"}
+    \section{./data\_loader\_json.py}
+    \lstinputlisting[style=custompy]{"C:/Users/langh/Home/Charlie/edx/net/CUTIE/data_loader_json.py"}
+    \section{./download\_data.py}
+    \lstinputlisting[style=custompy]{"C:/Users/langh/Home/Charlie/edx/net/CUTIE/download_data.py"}
+    \section{./export\_data.py}
+    \lstinputlisting[style=custompy]{"C:/Users/langh/Home/Charlie/edx/net/CUTIE/export_data.py"}
+    \section{./helper.py}
+    \lstinputlisting[style=custompy]{"C:/Users/langh/Home/Charlie/edx/net/CUTIE/helper.py"}
+    \section{./main\_build\_dict.py}
+    \lstinputlisting[style=custompy]{"C:/Users/langh/Home/Charlie/edx/net/CUTIE/main_build_dict.py"}
+    \section{./main\_data\_tokenizer.py}
+    \lstinputlisting[style=custompy]{"C:/Users/langh/Home/Charlie/edx/net/CUTIE/main_data_tokenizer.py"}
+    \section{./main\_evaluate\_json.py}
+    \lstinputlisting[style=custompy]{"C:/Users/langh/Home/Charlie/edx/net/CUTIE/main_evaluate_json.py"}
+    \section{./main\_train\_json.py}
+    \lstinputlisting[style=custompy]{"C:/Users/langh/Home/Charlie/edx/net/CUTIE/main_train_json.py"}
+    \section{./model\_cutie.py}
+    \lstinputlisting[style=custompy]{"C:/Users/langh/Home/Charlie/edx/net/CUTIE/model_cutie.py"}
+    \section{./model\_cutie2.py}
+    \lstinputlisting[style=custompy]{"C:/Users/langh/Home/Charlie/edx/net/CUTIE/model_cutie2.py"}
+    \section{./model\_cutie2\_aspp.py}
+    \lstinputlisting[style=custompy]{"C:/Users/langh/Home/Charlie/edx/net/CUTIE/model_cutie2_aspp.py"}
+    \section{./model\_cutie2\_dilate.py}
+    \lstinputlisting[style=custompy]{"C:/Users/langh/Home/Charlie/edx/net/CUTIE/model_cutie2_dilate.py"}
+    \section{./model\_cutie2\_fpn.py}
+    \lstinputlisting[style=custompy]{"C:/Users/langh/Home/Charlie/edx/net/CUTIE/model_cutie2_fpn.py"}
+    \section{./model\_cutie\_aspp.py}
+    \lstinputlisting[style=custompy]{"C:/Users/langh/Home/Charlie/edx/net/CUTIE/model_cutie_aspp.py"}
+    \section{./model\_cutie\_hr.py}
+    \lstinputlisting[style=custompy]{"C:/Users/langh/Home/Charlie/edx/net/CUTIE/model_cutie_hr.py"}
+    \section{./model\_cutie\_res\_bert.py}
+    \lstinputlisting[style=custompy]{"C:/Users/langh/Home/Charlie/edx/net/CUTIE/model_cutie_res_bert.py"}
+    \section{./model\_framework.py}
+    \lstinputlisting[style=custompy]{"C:/Users/langh/Home/Charlie/edx/net/CUTIE/model_framework.py"}
+    \section{./tokenization.py}
+    \lstinputlisting[style=custompy]{"C:/Users/langh/Home/Charlie/edx/net/CUTIE/tokenization.py"}
+    \section{./utils.py}
+    \lstinputlisting[style=custompy]{"C:/Users/langh/Home/Charlie/edx/net/CUTIE/utils.py"}
+    \section{./deprecated/model\_cutie\_att.py}
+    \lstinputlisting[style=custompy]{"C:/Users/langh/Home/Charlie/edx/net/CUTIE/deprecated/model_cutie_att.py"}
+    \section{./deprecated/model\_cutie\_dilate.py}
+    \lstinputlisting[style=custompy]{"C:/Users/langh/Home/Charlie/edx/net/CUTIE/deprecated/model_cutie_dilate.py"}
+    \section{./deprecated/model\_cutie\_fpn8.py}
+    \lstinputlisting[style=custompy]{"C:/Users/langh/Home/Charlie/edx/net/CUTIE/deprecated/model_cutie_fpn8.py"}
+    \section{./deprecated/model\_cutie\_res.py}
+    \lstinputlisting[style=custompy]{"C:/Users/langh/Home/Charlie/edx/net/CUTIE/deprecated/model_cutie_res.py"}
+    \section{./deprecated/model\_cutie\_res16.py}
+    \lstinputlisting[style=custompy]{"C:/Users/langh/Home/Charlie/edx/net/CUTIE/deprecated/model_cutie_res16.py"}
+    \section{./deprecated/model\_cutie\_res\_att.py}
+    \lstinputlisting[style=custompy]{"C:/Users/langh/Home/Charlie/edx/net/CUTIE/deprecated/model_cutie_res_att.py"}
+    \section{./deprecated/model\_cutie\_res\_att\_bert.py}
+    \lstinputlisting[style=custompy]{"C:/Users/langh/Home/Charlie/edx/net/CUTIE/deprecated/model_cutie_res_att_bert.py"}
+    \section{./deprecated/model\_cutie\_sep.py}
+    \lstinputlisting[style=custompy]{"C:/Users/langh/Home/Charlie/edx/net/CUTIE/deprecated/model_cutie_sep.py"}
+    \section{./deprecated/model\_cutie\_unet8.py}
+    \lstinputlisting[style=custompy]{"C:/Users/langh/Home/Charlie/edx/net/CUTIE/deprecated/model_cutie_unet8.py"}
 \end{document}

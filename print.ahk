@@ -8,8 +8,8 @@ Loop, %0%
 if(args="")
 	args:=A_WorkingDir
 
-language:="Matlab"
-ext:="m"
+languages:=["Matlab", "Python"]
+extensions:=["m","py"]
 SplitPath, args, title
 title:=StrReplace(title,"_","\_")
 body=
@@ -18,7 +18,13 @@ body=
 \usepackage[left=5mm, top=5mm, bottom=5mm, right=5mm]{geometry}
 \usepackage{listings}
 \usepackage[usenames,dvipsnames]{color}
-\lstdefinestyle{customasm}{
+)
+Loop, % extensions._MaxIndex(){
+    ext:=extensions[A_Index]
+    language:=languages[A_Index]
+section=
+(
+\lstdefinestyle{custom%ext%}{
   belowcaptionskip=1\baselineskip,
   xleftmargin=\parindent,
   language=%language%,
@@ -30,6 +36,11 @@ body=
   identifierstyle=\color{blue},
   xleftmargin=1em,
 }
+)
+body:=body . section
+}
+section=
+(
 \usepackage[colorlinks=true,linkcolor=blue,linktocpage=true,linktoc=all]{hyperref}
 \title{%title%}
 \begin{document}
@@ -38,30 +49,34 @@ body=
 \tableofcontents
 \newpage
 )
+body:=body . section
 
 if(IsDirectory(args))
 {
-    Loop, Files, %args%\*.%ext%, RF
-    {
-        selFile:=A_LoopFileLongPath
-        SplitPath, selFile,name,dir,,name_no_ext
-        dir:=StrReplace(dir, args . "\")
-        dir:=StrReplace(dir, args)
-        selFile:=StrReplace(selFile, "\","/")
-        if(dir<>"")
-            path:=dir . "/" . name
-        else
-            path:=name
-        path:=StrReplace(path,"\","/")
-        path:=StrReplace(path,"_","\_")
-        path:="./" . path
-; \section{\hyperref[toc]{%path%}}
-body=%body%
-(
+    Loop, % extensions._MaxIndex(){
+        ext:=extensions[A_Index]
+        Loop, Files, %args%\*.%ext%, RF
+        {
+            selFile:=A_LoopFileLongPath
+            SplitPath, selFile,name,dir,,name_no_ext
+            dir:=StrReplace(dir, args . "\")
+            dir:=StrReplace(dir, args)
+            selFile:=StrReplace(selFile, "\","/")
+            if(dir<>"")
+                path:=dir . "/" . name
+            else
+                path:=name
+            path:=StrReplace(path,"\","/")
+            path:=StrReplace(path,"_","\_")
+            path:="./" . path
+    ; \section{\hyperref[toc]{%path%}}
+    body=%body%
+    (
 
-\section{%path%}
-\lstinputlisting[style=customasm]{"%selFile%"}
-)
+    \section{%path%}
+    \lstinputlisting[style=custom%ext%]{"%selFile%"}
+    )
+        }
     }
 }
 
