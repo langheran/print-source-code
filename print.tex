@@ -1,91 +1,130 @@
 \documentclass{article}
 \usepackage[left=5mm, top=5mm, bottom=5mm, right=5mm]{geometry}
+\usepackage{multicol}
 \usepackage{listings}
 \usepackage[usenames,dvipsnames]{color}\lstdefinestyle{customm}{
+  basicstyle=\Large\ttfamily,
   belowcaptionskip=1\baselineskip,
   xleftmargin=\parindent,
   language=Matlab,
   breaklines=true,
-  basicstyle=\footnotesize\ttfamily,
   commentstyle=\itshape\color{Gray},
   stringstyle=\color{Black},
   keywordstyle=\bfseries\color{OliveGreen},
   identifierstyle=\color{blue},
-  xleftmargin=1em,
+  xleftmargin=0.1em,
 }\lstdefinestyle{custompy}{
+  basicstyle=\Large\ttfamily,
   belowcaptionskip=1\baselineskip,
   xleftmargin=\parindent,
   language=Python,
   breaklines=true,
-  basicstyle=\footnotesize\ttfamily,
   commentstyle=\itshape\color{Gray},
   stringstyle=\color{Black},
   keywordstyle=\bfseries\color{OliveGreen},
   identifierstyle=\color{blue},
-  xleftmargin=1em,
+  xleftmargin=0.1em,
 }\usepackage[colorlinks=true,linkcolor=blue,linktocpage=true,linktoc=all]{hyperref}
-\title{CUTIE}
+\title{5.Approximate Inference}
 \begin{document}
 \maketitle
-\label{toc}
-\tableofcontents
-\newpage
-    \section{./bert\_embedding.py}
-    \lstinputlisting[style=custompy]{"C:/Users/langh/Home/Charlie/edx/net/CUTIE/bert_embedding.py"}
-    \section{./data\_loader\_json.py}
-    \lstinputlisting[style=custompy]{"C:/Users/langh/Home/Charlie/edx/net/CUTIE/data_loader_json.py"}
-    \section{./download\_data.py}
-    \lstinputlisting[style=custompy]{"C:/Users/langh/Home/Charlie/edx/net/CUTIE/download_data.py"}
-    \section{./export\_data.py}
-    \lstinputlisting[style=custompy]{"C:/Users/langh/Home/Charlie/edx/net/CUTIE/export_data.py"}
-    \section{./helper.py}
-    \lstinputlisting[style=custompy]{"C:/Users/langh/Home/Charlie/edx/net/CUTIE/helper.py"}
-    \section{./main\_build\_dict.py}
-    \lstinputlisting[style=custompy]{"C:/Users/langh/Home/Charlie/edx/net/CUTIE/main_build_dict.py"}
-    \section{./main\_data\_tokenizer.py}
-    \lstinputlisting[style=custompy]{"C:/Users/langh/Home/Charlie/edx/net/CUTIE/main_data_tokenizer.py"}
-    \section{./main\_evaluate\_json.py}
-    \lstinputlisting[style=custompy]{"C:/Users/langh/Home/Charlie/edx/net/CUTIE/main_evaluate_json.py"}
-    \section{./main\_train\_json.py}
-    \lstinputlisting[style=custompy]{"C:/Users/langh/Home/Charlie/edx/net/CUTIE/main_train_json.py"}
-    \section{./model\_cutie.py}
-    \lstinputlisting[style=custompy]{"C:/Users/langh/Home/Charlie/edx/net/CUTIE/model_cutie.py"}
-    \section{./model\_cutie2.py}
-    \lstinputlisting[style=custompy]{"C:/Users/langh/Home/Charlie/edx/net/CUTIE/model_cutie2.py"}
-    \section{./model\_cutie2\_aspp.py}
-    \lstinputlisting[style=custompy]{"C:/Users/langh/Home/Charlie/edx/net/CUTIE/model_cutie2_aspp.py"}
-    \section{./model\_cutie2\_dilate.py}
-    \lstinputlisting[style=custompy]{"C:/Users/langh/Home/Charlie/edx/net/CUTIE/model_cutie2_dilate.py"}
-    \section{./model\_cutie2\_fpn.py}
-    \lstinputlisting[style=custompy]{"C:/Users/langh/Home/Charlie/edx/net/CUTIE/model_cutie2_fpn.py"}
-    \section{./model\_cutie\_aspp.py}
-    \lstinputlisting[style=custompy]{"C:/Users/langh/Home/Charlie/edx/net/CUTIE/model_cutie_aspp.py"}
-    \section{./model\_cutie\_hr.py}
-    \lstinputlisting[style=custompy]{"C:/Users/langh/Home/Charlie/edx/net/CUTIE/model_cutie_hr.py"}
-    \section{./model\_cutie\_res\_bert.py}
-    \lstinputlisting[style=custompy]{"C:/Users/langh/Home/Charlie/edx/net/CUTIE/model_cutie_res_bert.py"}
-    \section{./model\_framework.py}
-    \lstinputlisting[style=custompy]{"C:/Users/langh/Home/Charlie/edx/net/CUTIE/model_framework.py"}
-    \section{./tokenization.py}
-    \lstinputlisting[style=custompy]{"C:/Users/langh/Home/Charlie/edx/net/CUTIE/tokenization.py"}
-    \section{./utils.py}
-    \lstinputlisting[style=custompy]{"C:/Users/langh/Home/Charlie/edx/net/CUTIE/utils.py"}
-    \section{./deprecated/model\_cutie\_att.py}
-    \lstinputlisting[style=custompy]{"C:/Users/langh/Home/Charlie/edx/net/CUTIE/deprecated/model_cutie_att.py"}
-    \section{./deprecated/model\_cutie\_dilate.py}
-    \lstinputlisting[style=custompy]{"C:/Users/langh/Home/Charlie/edx/net/CUTIE/deprecated/model_cutie_dilate.py"}
-    \section{./deprecated/model\_cutie\_fpn8.py}
-    \lstinputlisting[style=custompy]{"C:/Users/langh/Home/Charlie/edx/net/CUTIE/deprecated/model_cutie_fpn8.py"}
-    \section{./deprecated/model\_cutie\_res.py}
-    \lstinputlisting[style=custompy]{"C:/Users/langh/Home/Charlie/edx/net/CUTIE/deprecated/model_cutie_res.py"}
-    \section{./deprecated/model\_cutie\_res16.py}
-    \lstinputlisting[style=custompy]{"C:/Users/langh/Home/Charlie/edx/net/CUTIE/deprecated/model_cutie_res16.py"}
-    \section{./deprecated/model\_cutie\_res\_att.py}
-    \lstinputlisting[style=custompy]{"C:/Users/langh/Home/Charlie/edx/net/CUTIE/deprecated/model_cutie_res_att.py"}
-    \section{./deprecated/model\_cutie\_res\_att\_bert.py}
-    \lstinputlisting[style=custompy]{"C:/Users/langh/Home/Charlie/edx/net/CUTIE/deprecated/model_cutie_res_att_bert.py"}
-    \section{./deprecated/model\_cutie\_sep.py}
-    \lstinputlisting[style=custompy]{"C:/Users/langh/Home/Charlie/edx/net/CUTIE/deprecated/model_cutie_sep.py"}
-    \section{./deprecated/model\_cutie\_unet8.py}
-    \lstinputlisting[style=custompy]{"C:/Users/langh/Home/Charlie/edx/net/CUTIE/deprecated/model_cutie_unet8.py"}
+\begin{multicols}{2}
+  \label{toc}
+  \tableofcontents
+\end{multicols}
+\newpage    \newpage
+    \section{\hyperref[toc]{./AssignmentToIndex.m}}
+    \lstinputlisting[style=customm]{"C:/Users/langh/Books/Bayesian Networks/Probabilistic-Graphical-Models/5.Approximate Inference/AssignmentToIndex.m"}    \newpage
+    \section{\hyperref[toc]{./BlockLogDistribution.m}}
+    \lstinputlisting[style=customm]{"C:/Users/langh/Books/Bayesian Networks/Probabilistic-Graphical-Models/5.Approximate Inference/BlockLogDistribution.m"}    \newpage
+    \section{\hyperref[toc]{./CheckConvergence.m}}
+    \lstinputlisting[style=customm]{"C:/Users/langh/Books/Bayesian Networks/Probabilistic-Graphical-Models/5.Approximate Inference/CheckConvergence.m"}    \newpage
+    \section{\hyperref[toc]{./CliqueTreeCalibrate.m}}
+    \lstinputlisting[style=customm]{"C:/Users/langh/Books/Bayesian Networks/Probabilistic-Graphical-Models/5.Approximate Inference/CliqueTreeCalibrate.m"}    \newpage
+    \section{\hyperref[toc]{./ClusterGraphCalibrate.m}}
+    \lstinputlisting[style=customm]{"C:/Users/langh/Books/Bayesian Networks/Probabilistic-Graphical-Models/5.Approximate Inference/ClusterGraphCalibrate.m"}    \newpage
+    \section{\hyperref[toc]{./ComputeApproxMarginalsBP.m}}
+    \lstinputlisting[style=customm]{"C:/Users/langh/Books/Bayesian Networks/Probabilistic-Graphical-Models/5.Approximate Inference/ComputeApproxMarginalsBP.m"}    \newpage
+    \section{\hyperref[toc]{./ComputeExactMarginalsBP.m}}
+    \lstinputlisting[style=customm]{"C:/Users/langh/Books/Bayesian Networks/Probabilistic-Graphical-Models/5.Approximate Inference/ComputeExactMarginalsBP.m"}    \newpage
+    \section{\hyperref[toc]{./ComputeInitialPotentials.m}}
+    \lstinputlisting[style=customm]{"C:/Users/langh/Books/Bayesian Networks/Probabilistic-Graphical-Models/5.Approximate Inference/ComputeInitialPotentials.m"}    \newpage
+    \section{\hyperref[toc]{./ConstructRandNetwork.m}}
+    \lstinputlisting[style=customm]{"C:/Users/langh/Books/Bayesian Networks/Probabilistic-Graphical-Models/5.Approximate Inference/ConstructRandNetwork.m"}    \newpage
+    \section{\hyperref[toc]{./ConstructToyNetwork.m}}
+    \lstinputlisting[style=customm]{"C:/Users/langh/Books/Bayesian Networks/Probabilistic-Graphical-Models/5.Approximate Inference/ConstructToyNetwork.m"}    \newpage
+    \section{\hyperref[toc]{./CreateCliqueTree.m}}
+    \lstinputlisting[style=customm]{"C:/Users/langh/Books/Bayesian Networks/Probabilistic-Graphical-Models/5.Approximate Inference/CreateCliqueTree.m"}    \newpage
+    \section{\hyperref[toc]{./CreateClusterGraph.m}}
+    \lstinputlisting[style=customm]{"C:/Users/langh/Books/Bayesian Networks/Probabilistic-Graphical-Models/5.Approximate Inference/CreateClusterGraph.m"}    \newpage
+    \section{\hyperref[toc]{./EdgeToFactorCorrespondence.m}}
+    \lstinputlisting[style=customm]{"C:/Users/langh/Books/Bayesian Networks/Probabilistic-Graphical-Models/5.Approximate Inference/EdgeToFactorCorrespondence.m"}    \newpage
+    \section{\hyperref[toc]{./EliminateVar.m}}
+    \lstinputlisting[style=customm]{"C:/Users/langh/Books/Bayesian Networks/Probabilistic-Graphical-Models/5.Approximate Inference/EliminateVar.m"}    \newpage
+    \section{\hyperref[toc]{./ExtractMarginalsFromSamples.m}}
+    \lstinputlisting[style=customm]{"C:/Users/langh/Books/Bayesian Networks/Probabilistic-Graphical-Models/5.Approximate Inference/ExtractMarginalsFromSamples.m"}    \newpage
+    \section{\hyperref[toc]{./FactorMarginalization.m}}
+    \lstinputlisting[style=customm]{"C:/Users/langh/Books/Bayesian Networks/Probabilistic-Graphical-Models/5.Approximate Inference/FactorMarginalization.m"}    \newpage
+    \section{\hyperref[toc]{./FactorProduct.m}}
+    \lstinputlisting[style=customm]{"C:/Users/langh/Books/Bayesian Networks/Probabilistic-Graphical-Models/5.Approximate Inference/FactorProduct.m"}    \newpage
+    \section{\hyperref[toc]{./GetNextCliques.m}}
+    \lstinputlisting[style=customm]{"C:/Users/langh/Books/Bayesian Networks/Probabilistic-Graphical-Models/5.Approximate Inference/GetNextCliques.m"}    \newpage
+    \section{\hyperref[toc]{./GetNextClusters.m}}
+    \lstinputlisting[style=customm]{"C:/Users/langh/Books/Bayesian Networks/Probabilistic-Graphical-Models/5.Approximate Inference/GetNextClusters.m"}    \newpage
+    \section{\hyperref[toc]{./GetValueOfAssignment.m}}
+    \lstinputlisting[style=customm]{"C:/Users/langh/Books/Bayesian Networks/Probabilistic-Graphical-Models/5.Approximate Inference/GetValueOfAssignment.m"}    \newpage
+    \section{\hyperref[toc]{./GibbsTrans.m}}
+    \lstinputlisting[style=customm]{"C:/Users/langh/Books/Bayesian Networks/Probabilistic-Graphical-Models/5.Approximate Inference/GibbsTrans.m"}    \newpage
+    \section{\hyperref[toc]{./IndexToAssignment.m}}
+    \lstinputlisting[style=customm]{"C:/Users/langh/Books/Bayesian Networks/Probabilistic-Graphical-Models/5.Approximate Inference/IndexToAssignment.m"}    \newpage
+    \section{\hyperref[toc]{./LogProbOfJointAssignment.m}}
+    \lstinputlisting[style=customm]{"C:/Users/langh/Books/Bayesian Networks/Probabilistic-Graphical-Models/5.Approximate Inference/LogProbOfJointAssignment.m"}    \newpage
+    \section{\hyperref[toc]{./MCMCInference.m}}
+    \lstinputlisting[style=customm]{"C:/Users/langh/Books/Bayesian Networks/Probabilistic-Graphical-Models/5.Approximate Inference/MCMCInference.m"}    \newpage
+    \section{\hyperref[toc]{./MHGibbsTrans.m}}
+    \lstinputlisting[style=customm]{"C:/Users/langh/Books/Bayesian Networks/Probabilistic-Graphical-Models/5.Approximate Inference/MHGibbsTrans.m"}    \newpage
+    \section{\hyperref[toc]{./MHSWTrans.m}}
+    \lstinputlisting[style=customm]{"C:/Users/langh/Books/Bayesian Networks/Probabilistic-Graphical-Models/5.Approximate Inference/MHSWTrans.m"}    \newpage
+    \section{\hyperref[toc]{./MHUniformTrans.m}}
+    \lstinputlisting[style=customm]{"C:/Users/langh/Books/Bayesian Networks/Probabilistic-Graphical-Models/5.Approximate Inference/MHUniformTrans.m"}    \newpage
+    \section{\hyperref[toc]{./NaiveGetNextClusters.m}}
+    \lstinputlisting[style=customm]{"C:/Users/langh/Books/Bayesian Networks/Probabilistic-Graphical-Models/5.Approximate Inference/NaiveGetNextClusters.m"}    \newpage
+    \section{\hyperref[toc]{./ObserveEvidence.m}}
+    \lstinputlisting[style=customm]{"C:/Users/langh/Books/Bayesian Networks/Probabilistic-Graphical-Models/5.Approximate Inference/ObserveEvidence.m"}    \newpage
+    \section{\hyperref[toc]{./ProblemSet.m}}
+    \lstinputlisting[style=customm]{"C:/Users/langh/Books/Bayesian Networks/Probabilistic-Graphical-Models/5.Approximate Inference/ProblemSet.m"}    \newpage
+    \section{\hyperref[toc]{./PruneTree.m}}
+    \lstinputlisting[style=customm]{"C:/Users/langh/Books/Bayesian Networks/Probabilistic-Graphical-Models/5.Approximate Inference/PruneTree.m"}    \newpage
+    \section{\hyperref[toc]{./rand.m}}
+    \lstinputlisting[style=customm]{"C:/Users/langh/Books/Bayesian Networks/Probabilistic-Graphical-Models/5.Approximate Inference/rand.m"}    \newpage
+    \section{\hyperref[toc]{./randi.m}}
+    \lstinputlisting[style=customm]{"C:/Users/langh/Books/Bayesian Networks/Probabilistic-Graphical-Models/5.Approximate Inference/randi.m"}    \newpage
+    \section{\hyperref[toc]{./randsample.m}}
+    \lstinputlisting[style=customm]{"C:/Users/langh/Books/Bayesian Networks/Probabilistic-Graphical-Models/5.Approximate Inference/randsample.m"}    \newpage
+    \section{\hyperref[toc]{./scomponents.m}}
+    \lstinputlisting[style=customm]{"C:/Users/langh/Books/Bayesian Networks/Probabilistic-Graphical-Models/5.Approximate Inference/scomponents.m"}    \newpage
+    \section{\hyperref[toc]{./SetValueOfAssignment.m}}
+    \lstinputlisting[style=customm]{"C:/Users/langh/Books/Bayesian Networks/Probabilistic-Graphical-Models/5.Approximate Inference/SetValueOfAssignment.m"}    \newpage
+    \section{\hyperref[toc]{./SmartGetNextClusters.m}}
+    \lstinputlisting[style=customm]{"C:/Users/langh/Books/Bayesian Networks/Probabilistic-Graphical-Models/5.Approximate Inference/SmartGetNextClusters.m"}    \newpage
+    \section{\hyperref[toc]{./smooth.m}}
+    \lstinputlisting[style=customm]{"C:/Users/langh/Books/Bayesian Networks/Probabilistic-Graphical-Models/5.Approximate Inference/smooth.m"}    \newpage
+    \section{\hyperref[toc]{./sparse\_to\_csr.m}}
+    \lstinputlisting[style=customm]{"C:/Users/langh/Books/Bayesian Networks/Probabilistic-Graphical-Models/5.Approximate Inference/sparse_to_csr.m"}    \newpage
+    \section{\hyperref[toc]{./submit.m}}
+    \lstinputlisting[style=customm]{"C:/Users/langh/Books/Bayesian Networks/Probabilistic-Graphical-Models/5.Approximate Inference/submit.m"}    \newpage
+    \section{\hyperref[toc]{./testscript.m}}
+    \lstinputlisting[style=customm]{"C:/Users/langh/Books/Bayesian Networks/Probabilistic-Graphical-Models/5.Approximate Inference/testscript.m"}    \newpage
+    \section{\hyperref[toc]{./TestToy.m}}
+    \lstinputlisting[style=customm]{"C:/Users/langh/Books/Bayesian Networks/Probabilistic-Graphical-Models/5.Approximate Inference/TestToy.m"}    \newpage
+    \section{\hyperref[toc]{./VariableToFactorCorrespondence.m}}
+    \lstinputlisting[style=customm]{"C:/Users/langh/Books/Bayesian Networks/Probabilistic-Graphical-Models/5.Approximate Inference/VariableToFactorCorrespondence.m"}    \newpage
+    \section{\hyperref[toc]{./VisualizeMCMCMarginals.m}}
+    \lstinputlisting[style=customm]{"C:/Users/langh/Books/Bayesian Networks/Probabilistic-Graphical-Models/5.Approximate Inference/VisualizeMCMCMarginals.m"}    \newpage
+    \section{\hyperref[toc]{./VisualizeToyImageMarginals.m}}
+    \lstinputlisting[style=customm]{"C:/Users/langh/Books/Bayesian Networks/Probabilistic-Graphical-Models/5.Approximate Inference/VisualizeToyImageMarginals.m"}    \newpage
+    \section{\hyperref[toc]{./gaimc/scomponents.m}}
+    \lstinputlisting[style=customm]{"C:/Users/langh/Books/Bayesian Networks/Probabilistic-Graphical-Models/5.Approximate Inference/gaimc/scomponents.m"}    \newpage
+    \section{\hyperref[toc]{./gaimc/sparse\_to\_csr.m}}
+    \lstinputlisting[style=customm]{"C:/Users/langh/Books/Bayesian Networks/Probabilistic-Graphical-Models/5.Approximate Inference/gaimc/sparse_to_csr.m"}
 \end{document}

@@ -16,6 +16,7 @@ body=
 (
 \documentclass{article}
 \usepackage[left=5mm, top=5mm, bottom=5mm, right=5mm]{geometry}
+\usepackage{multicol}
 \usepackage{listings}
 \usepackage[usenames,dvipsnames]{color}
 )
@@ -25,16 +26,16 @@ Loop, % extensions._MaxIndex(){
 section=
 (
 \lstdefinestyle{custom%ext%}{
+  basicstyle=\Large\ttfamily,
   belowcaptionskip=1\baselineskip,
   xleftmargin=\parindent,
   language=%language%,
   breaklines=true,
-  basicstyle=\footnotesize\ttfamily,
   commentstyle=\itshape\color{Gray},
   stringstyle=\color{Black},
   keywordstyle=\bfseries\color{OliveGreen},
   identifierstyle=\color{blue},
-  xleftmargin=1em,
+  xleftmargin=0.1em,
 }
 )
 body:=body . section
@@ -45,8 +46,10 @@ section=
 \title{%title%}
 \begin{document}
 \maketitle
-\label{toc}
-\tableofcontents
+\begin{multicols}{2}
+  \label{toc}
+  \tableofcontents
+\end{multicols}
 \newpage
 )
 body:=body . section
@@ -72,8 +75,8 @@ if(IsDirectory(args))
     ; \section{\hyperref[toc]{%path%}}
     body=%body%
     (
-
-    \section{%path%}
+    \newpage
+    \section{\hyperref[toc]{%path%}}
     \lstinputlisting[style=custom%ext%]{"%selFile%"}
     )
         }

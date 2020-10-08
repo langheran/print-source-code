@@ -1,0 +1,1 @@
+pdflatex.exe -synctex=1 --shell-escape -interaction=nonstopmode "print".tex
